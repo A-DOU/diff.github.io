@@ -999,24 +999,7 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
       }
     });
 
-    function initSearchJson() {
-      initLoad(['/search.flv'], {
-        loadOptions: {
-          success: function (obj) {
-            localStorage.setItem('searchJson', obj['search.json'])
-          },
-          error: function (e) {
-            return console.log(e)
-          }
-        },
-        returnOptions: {
-          'json': TYPE_TEXT
-        },
-        mimeOptions: {
-          'json': 'application/json'
-        }
-      })
-    }
+   
     // search function;
     var searchFunc = function (search_id, content_id) {
       'use strict';
